@@ -1,0 +1,21 @@
+{
+  "name": "inuit-boilerplate",
+  "version": "1.0.0",
+  "description": "A starter project for using the excellent InuitCSS framework",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/john-cheesman/inuit-boilerplate.git"
+  },
+  "keywords": [
+    "inuitcss",
+    "sass",
+    "scss",
+    "inuit",
+    "css3"
+  ],
+  "author": "John Cheesman",
+  "license": "MIT",
+  "bugs": {
+    "url": "git://github.com/john-cheesman/inuit-boilerplate.git"
+  }
+}
