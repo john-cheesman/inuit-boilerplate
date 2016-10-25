@@ -34,7 +34,8 @@
     "clean-styles": "rimraf web/css && mkdirp web/css",
     "build:development": "cross-env NODE_ENV=development npm run styles:development",
     "build:production": "cross-env NODE_ENV=production npm run styles:production",
-    "prestyles": "npm run clean-styles",
+    "prestyles:development": "npm run clean-styles",
+    "prestyles:production": "npm run clean-styles",
     "styles:development": "node-sass src/sass/main.scss | postcss -u autoprefixer > web/css/style.css",
     "styles:production": "node-sass src/sass/main.scss | postcss -u autoprefixer | cleancss > web/css/style.css"
   }
