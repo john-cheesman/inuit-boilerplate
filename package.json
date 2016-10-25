@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^6.5.1",
+    "clean-css": "^3.4.20",
     "cross-env": "^3.1.3",
     "mkdirp": "^0.5.1",
     "node-sass": "^3.10.1",
@@ -31,9 +32,10 @@
   },
   "scripts": {
     "clean-styles": "rimraf web/css && mkdirp web/css",
-    "build": "cross-env NODE_ENV=development node npm-scripts/build.js",
-    "release": "cross-env NODE_ENV=production node npm-scripts/build.js",
+    "build:development": "cross-env NODE_ENV=development npm run styles:development",
+    "build:production": "cross-env NODE_ENV=production npm run styles:production",
     "prestyles": "npm run clean-styles",
-    "styles": "node-sass src/sass/main.scss | postcss -u autoprefixer > web/css/style.css"
+    "styles:development": "node-sass src/sass/main.scss | postcss -u autoprefixer > web/css/style.css",
+    "styles:production": "node-sass src/sass/main.scss | postcss -u autoprefixer | cleancss > web/css/style.css"
   }
 }
