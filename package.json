@@ -23,17 +23,24 @@
   },
   "devDependencies": {
     "autoprefixer": "^6.5.1",
+    "babel-core": "^6.18.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-register": "^6.18.0",
     "clean-css": "^3.4.20",
     "cross-env": "^3.1.3",
-    "http-server": "^0.9.0",
+    "env-cmd": "^2.2.0",
+    "http-server": "github:indexzero/http-server",
     "mkdirp": "^0.5.1",
     "node-sass": "^3.10.1",
-    "per-env": "^1.0.2",
     "postcss-cli": "^2.6.0",
-    "rimraf": "^2.5.4"
+    "rimraf": "^2.5.4",
+    "runjs": "^2.5.1",
+    "watch": "^1.0.1"
   },
   "scripts": {
-    "serve": "http-server web -o",
+    "build": "env-cmd .env run build",
+    "serve": "env-cmd .env run serve",
+    "start": "env-cmd .env run start",
     "start:development": "npm run build:development && npm run serve",
     "start:production": "npm run build:production",
     "clean-styles": "rimraf web/css && mkdirp web/css",
@@ -42,6 +49,12 @@
     "prestyles:development": "npm run clean-styles",
     "prestyles:production": "npm run clean-styles",
     "styles:development": "node-sass src/sass/main.scss | postcss -u autoprefixer > web/css/style.css",
-    "styles:production": "node-sass src/sass/main.scss | postcss -u autoprefixer | cleancss > web/css/style.css"
+    "styles:production": "node-sass src/sass/main.scss | postcss -u autoprefixer | cleancss > web/css/style.css",
+    "styles:watch": "npm run styles:development -- -w"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
   }
 }
