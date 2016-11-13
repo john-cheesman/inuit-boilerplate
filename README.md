@@ -30,7 +30,7 @@ Or:
 NODE_ENV=production
 ```
 
-### Run tasks seperatley
+### Run tasks seperately
 
 ```
 $ npm run build
