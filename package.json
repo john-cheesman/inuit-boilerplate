@@ -8,6 +8,7 @@
   },
   "keywords": [
     "inuitcss",
+    "inuit",
     "sass",
     "scss",
     "inuit",
@@ -40,17 +41,7 @@
   "scripts": {
     "build": "env-cmd .env run build",
     "serve": "env-cmd .env run serve",
-    "start": "env-cmd .env run start",
-    "start:development": "npm run build:development && npm run serve",
-    "start:production": "npm run build:production",
-    "clean-styles": "rimraf web/css && mkdirp web/css",
-    "build:development": "npm run styles:development",
-    "build:production": "npm run styles:production",
-    "prestyles:development": "npm run clean-styles",
-    "prestyles:production": "npm run clean-styles",
-    "styles:development": "node-sass src/sass/main.scss | postcss -u autoprefixer > web/css/style.css",
-    "styles:production": "node-sass src/sass/main.scss | postcss -u autoprefixer | cleancss > web/css/style.css",
-    "styles:watch": "npm run styles:development -- -w"
+    "start": "env-cmd .env run start"
   },
   "babel": {
     "presets": [

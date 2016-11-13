@@ -18,11 +18,6 @@ const task = {
     'serve': () => {
         run(`http-server web -o -p ${process.env.PORT || 8080}`, { async: true });
     },
-    'start': () => {
-        task[`build`]();
-        task[`watch`]();
-        task[`serve`]();
-    },
     'watch:styles': () => {
         watch.watchTree(`src/sass`, () => {
             task[`build:styles`]();
@@ -30,6 +25,11 @@ const task = {
     },
     'watch': () => {
         task[`watch:styles`]();
+    },
+    'start': () => {
+        task[`build`]();
+        task[`watch`]();
+        task[`serve`]();
     }
 };
 
