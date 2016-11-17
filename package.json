@@ -28,7 +28,6 @@
     "babel-preset-es2015": "^6.18.0",
     "babel-register": "^6.18.0",
     "clean-css": "^3.4.20",
-    "cross-env": "^3.1.3",
     "env-cmd": "^2.2.0",
     "http-server": "github:indexzero/http-server",
     "mkdirp": "^0.5.1",
