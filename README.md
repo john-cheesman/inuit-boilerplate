@@ -37,3 +37,8 @@ $ npm run build
 $ npm run watch
 $ npm run serve
 ```
+### Generate a new component
+
+```
+$ npm run add:component <component-name>
+```

@@ -1,4 +1,4 @@
-import { run } from 'runjs';
+import { run, generate } from 'runjs';
 import watch from 'watch';
 
 const task = {
@@ -25,6 +25,9 @@ const task = {
     },
     'watch': () => {
         task[`watch:styles`]();
+    },
+    'generate:component': (name) => {
+        generate(`component.tmp.js`, `src/sass/components/_components.${name}.scss`, { name: name, nameUpper: name.toUpperCase() });
     },
     'start': () => {
         task[`build`]();
