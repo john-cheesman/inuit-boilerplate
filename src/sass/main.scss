@@ -7,21 +7,22 @@
 @import "../../node_modules/inuitcss/tools/tools.font-size";
 @import "../../node_modules/inuitcss/tools/tools.clearfix";
 @import "../../node_modules/inuitcss/tools/tools.hidden";
-@import "../../node_modules/inuitcss/tools/tools.rem";
 @import "../../node_modules/sass-mq/mq";
 
 // GENERIC
 @import "../../node_modules/inuitcss/generic/generic.box-sizing";
 @import "../../node_modules/inuitcss/generic/generic.normalize";
+@import "../../node_modules/inuitcss/generic/generic.reset";
 @import "../../node_modules/inuitcss/generic/generic.shared";
 
 // ELEMENTS
+@import "../../node_modules/inuitcss/elements/elements.page";
 @import "../../node_modules/inuitcss/elements/elements.headings";
 @import "../../node_modules/inuitcss/elements/elements.images";
-@import "../../node_modules/inuitcss/elements/elements.page";
 @import "../../node_modules/inuitcss/elements/elements.tables";
 
 // OBJECTS
+@import "../../node_modules/inuitcss/objects/objects.wrapper";
 @import "../../node_modules/inuitcss/objects/objects.layout";
 @import "../../node_modules/inuitcss/objects/objects.media";
 @import "../../node_modules/inuitcss/objects/objects.flag";
@@ -29,13 +30,22 @@
 @import "../../node_modules/inuitcss/objects/objects.list-inline";
 @import "../../node_modules/inuitcss/objects/objects.box";
 @import "../../node_modules/inuitcss/objects/objects.block";
-@import "../../node_modules/inuitcss/objects/objects.tables";
-@import "../../node_modules/inuitcss/objects/objects.wrapper";
+@import "../../node_modules/inuitcss/objects/objects.ratio";
+@import "../../node_modules/inuitcss/objects/objects.crop";
+@import "../../node_modules/inuitcss/objects/objects.table";
+@import "../../node_modules/inuitcss/objects/objects.pack";
 
 // COMPONENTS
 @import "components/components.buttons";
 
 // UTILITIES
+@import "../../node_modules/inuitcss/utilities/utilities.clearfix";
+
+$inuit-offsets: false;
 @import "../../node_modules/inuitcss/utilities/utilities.widths";
 @import "../../node_modules/inuitcss/utilities/utilities.headings";
-@import "../../node_modules/inuitcss/utilities/utilities.spacing";
+@import "../../node_modules/inuitcss/utilities/utilities.spacings";
+@import "../../node_modules/inuitcss/utilities/utilities.responsive-spacings";
+@import "../../node_modules/inuitcss/utilities/utilities.print";
+@import "../../node_modules/inuitcss/utilities/utilities.hide";
+
