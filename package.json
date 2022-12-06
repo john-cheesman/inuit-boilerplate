@@ -29,7 +29,7 @@
     "babel-register": "^6.18.0",
     "clean-css-cli": "^4.3.0",
     "env-cmd": "^2.2.0",
-    "http-server": "^0.11.1",
+    "http-server": "^0.11.2",
     "mkdirp": "^0.5.1",
     "node-sass": "^3.10.1",
     "postcss-cli": "^6.1.3",
